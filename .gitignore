@@ -3,6 +3,11 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# bens custom ignores
+**/scratch/
+scratch*
+
+
 # C extensions
 *.so
 
