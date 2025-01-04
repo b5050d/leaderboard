@@ -1,0 +1,61 @@
+/* styles.css */
+/* Table Styles */
+.basic-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.basic-table th, .basic-table td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+.basic-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.bordered-table {
+    width: 100%;
+    border: 2px solid #333;
+    border-collapse: collapse;
+}
+
+.bordered-table th, .bordered-table td {
+    border: 1px solid #666;
+    text-align: left;
+    padding: 10px;
+}
+
+.bordered-table th {
+    background-color: #555;
+    color: white;
+}
+
+.hover-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.hover-table th, .hover-table td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+.hover-table tr:hover {
+    background-color: #d1e7dd;
+}
+
+.hover-table th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.scrollable-div {
+    width: 800px;
+    height: 300px; /* Set the height as per your requirement */
+    overflow-y: scroll; /* Enable vertical scrolling */
+    border: 1px solid #ccc; /* Add a border for visualization */
+    padding: 10px; /* Add padding for content inside the div */
+}

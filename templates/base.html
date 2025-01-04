@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Finance Application</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <link href="static/bootstrap.min.css" rel="stylesheet" media="screen"> -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+        <style>
+            table {
+              width: 80%;
+              border-collapse: collapse;
+              margin: 10px 0;
+              font-size: 16px;
+              font-family: Arial, sans-serif;
+              text-align: left;
+              background-color: #f9f9f9;
+            }
+          
+            th, td {
+              padding: 12px 15px;
+              border: 1px solid #ddd;
+            }
+          
+            th {
+              background-color: #041d04;
+              color: white;
+            }
+          
+            tr:nth-child(even) {
+              background-color: #f2f2f2;
+            }
+          
+            tr:hover {
+              background-color: #ddd;
+            }
+          
+            caption {
+              caption-side: top;
+              font-size: 18px;
+              font-weight: bold;
+              margin-bottom: 10px;
+            }
+          </style>
+    </head>
+    <body>
+        <h1>Finance Application</h1>
+        <hr>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/expense">Expense</a>
+            <a href="/income">Income</a>
+        </nav>
+        <hr>
+
+        <div class = "container">
+            <!-- child template -->
+            {% block content %}{% endblock %}
+
+            <!-- errors -->
+            {% if error %}
+                <p class="error"><strong>Error:</strong> {{ error }}</p>
+            {% endif %}
+
+            <!-- m,essages -->
+            {% for message in get_flashed_messages() %}
+                {{ message }}
+            {% endfor %}
+        </div>
+        <hr>
+    </body>
+</html>
